@@ -1,0 +1,6 @@
+flask
+numpy
+tensorflow
+pickle
+werkzeug
+os

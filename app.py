@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request
 import numpy as np
-import pandas as pd
-import keras
 from keras.layers import *
 from tensorflow.keras.applications.resnet50 import preprocess_input
 from keras.preprocessing import image
@@ -13,7 +11,7 @@ from os.path import isdir
 from werkzeug.wrappers import Request, Response
 
 app = Flask(__name__)
-
+model = load_model('model.h5')
 model2 = pickle.load(open('model2.pkl', 'rb'))
 
 
